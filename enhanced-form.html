@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+        header, main, footer {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        ul {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        video {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Event Registration</h1>
+    <p>Sign up for our Annual Tech Conference</p>
+</header>
+
+<main>
+    <section>
+        <h2>Event Highlights</h2>
+        <ul>
+            <li>Keynote speeches by industry leaders</li>
+            <li>Hands-on workshops</li>
+            <li>Networking sessions</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Schedule Overview</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Speaker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td>Opening Keynote</td>
+                    <td>Jane Doe</td>
+                </tr>
+                <tr>
+                    <td>10:30 - 12:00</td>
+                    <td>Workshop: AI in 2025</td>
+                    <td>John Smith</td>
+                </tr>
+                <tr>
+                    <td>14:00 - 15:30</td>
+                    <td>Panel Discussion</td>
+                    <td>Multiple Speakers</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Event Preview</h2>
+        <video controls>
+            <source src="sample-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Register Now</h2>
+        <form action="#" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+254 700 000 000" pattern="^\+?\d{1,3}[\s-]?\d{3}[\s-]?\d{3}[\s-]?\d{3}$" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Event Details</legend>
+                <label for="ticket-type">Ticket Type:</label>
+                <select id="ticket-type" name="ticket-type" required>
+                    <option value="">-- Select --</option>
+                    <option value="standard">Standard</option>
+                    <option value="vip">VIP</option>
+                </select>
+
+                <label for="attending-date">Preferred Date:</label>
+                <input type="date" id="attending-date" name="attending-date" required>
+
+                <label for="comments">Special Requests:</label>
+                <textarea id="comments" name="comments" placeholder="Let us know if you have any requirements..."></textarea>
+
+                <label for="refcode">Referral Code:</label>
+                <input type="text" id="refcode" name="refcode" value="AUTO-2025" readonly>
+            </fieldset>
+
+            <fieldset>
+                <legend>Login Setup</legend>
+                <label for="username">Create Username:</label>
+                <input type="text" id="username" name="username" placeholder="username123" required>
+
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" minlength="6" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>
+                    <input type="checkbox" name="newsletter" value="yes"> Subscribe to Newsletter
+                </label>
+
+                <p>Choose your preferred sessions:</p>
+                <label><input type="radio" name="session" value="morning" required> Morning Sessions</label>
+                <label><input type="radio" name="session" value="afternoon"> Afternoon Sessions</label>
+            </fieldset>
+
+            <button type="submit">Submit Registration</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Tech Conference. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
